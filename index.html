@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>MotoScoot.tn</title>
+    <link rel="icon" type="image/svg+xml" href="https://www.magma-studio.tn/portfolio2/moto/Logo/favicon.svg" />
+    
+    <!-- 1. PRÉ-CONNEXION RÉSEAU -->
+    <link rel="preconnect" href="https://aistudiocdn.com" crossorigin>
+    <link rel="preconnect" href="https://esm.sh" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- 2. OPTIMISATION LCP -->
+    <link rel="preload" as="image" href="https://magma-studio.tn/portfolio2/-hero-background.webp" media="(min-width: 768px)" fetchpriority="high">
+    <link rel="preload" as="image" href="https://www.magma-studio.tn/portfolio2/hero_section-background_mobile.webp" media="(max-width: 767px)" fetchpriority="high">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+            },
+            colors: {
+              primary: {
+                50: '#FFF7ED', 100: '#FBF1EC', 200: '#FFE4CC', 300: '#FBBF85',
+                400: '#F59E42', 500: '#EA7C1E', 600: '#E6580B', 700: '#C24A09',
+                800: '#9A3C07', 900: '#7C2F05',
+              },
+              gray: {
+                400: '#767676', // WCAG AA compliant (4.5:1)
+                500: '#5F5F5F', // High contrast (6.4:1)
+                600: '#404040', 
+              },
+              success: {
+                50: '#ECFDF5', 100: '#D1FAE5', 200: '#A7F3D0', 300: '#6EE7B7',
+                400: '#34D399', 500: '#10B981', 600: '#059669', 700: '#047857',
+                800: '#065F46', 900: '#064E3B',
+              },
+              warning: {
+                50: '#FEFCE8', 100: '#FEF9C3', 400: '#FACC15', 500: '#EAB308',
+                600: '#CA8A04', 700: '#A16207',
+              }
+            },
+            letterSpacing: {
+              'tighter': '-0.04em', 
+              'tight': '-0.02em',  
+              'normal': '0em',
+              'wide': '0.025em',
+              'wider': '0.05em',
+              'widest': '0.1em',   
+            },
+            lineHeight: {
+              'tight': '1.2',      
+              'snug': '1.35',       
+              'normal': '1.5',     
+              'relaxed': '1.625',
+            },
+            keyframes: {
+              'fade-in-up': {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              'fade-in': {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              'scale-in': {
+                '0%': { opacity: '0', transform: 'scale(0.95)' },
+                '100%': { opacity: '1', transform: 'scale(1)' },
+              },
+              'heartbeat': {
+                '0%': { transform: 'scale(1)' },
+                '14%': { transform: 'scale(1.2)' },
+                '28%': { transform: 'scale(1)' },
+                '42%': { transform: 'scale(1.2)' },
+                '70%': { transform: 'scale(1)' },
+              }
+            },
+            animation: {
+              'fade-in-up': 'fade-in-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              'fade-in': 'fade-in 0.4s ease-out forwards',
+              'scale-in': 'scale-in 0.3s ease-out forwards',
+              'heartbeat': 'heartbeat 1.5s ease-in-out infinite',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      * { -webkit-tap-highlight-color: transparent; }
+      
+      @media screen and (max-width: 767px) {
+        input, select, textarea, button { font-size: 16px !important; }
+      }
+
+      /* Inter font-feature-settings pour une meilleure lisibilité tech */
+      html {
+        font-feature-settings: "cv02", "cv03", "cv04", "ss01";
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.10.1",
+    "dompurify": "https://esm.sh/dompurify",
+    "react-hook-form": "https://esm.sh/react-hook-form@7.54.2?external=react,react-dom",
+    "zod": "https://esm.sh/zod@3.24.1",
+    "@hookform/resolvers/zod": "https://esm.sh/@hookform/resolvers@3.10.0/zod?external=react,react-dom",
+    "@tanstack/react-query": "https://esm.sh/@tanstack/react-query@5.62.7?external=react,react-dom",
+    "@hookform/resolvers/": "https://esm.sh/@hookform/resolvers@^5.2.2/"
+  }
+}
+</script>
+  </head>
+  <body class="font-sans text-gray-900 bg-white">
+    <div id="root"></div>
+  </body>
+</html>
